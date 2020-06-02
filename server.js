@@ -1,6 +1,5 @@
 'use strict'
 const S = require('fluent-schema')
-
 const app = require('fastify')({
   logger: true
 })
@@ -20,4 +19,5 @@ app.get('/', {
   return { ping: request.query.name, ignored: true }
 })
 
-app.listen(3000).catch(console.error)
+app.listen(3000).catch(console.log("error: missing variable"));
+//console.log("Hello world!");
